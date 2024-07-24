@@ -10,8 +10,8 @@ LazyData: true
 Imports: 
     dplyr,
     ggplot2,
-    tidyr,
-    magrittr
+    magrittr,
+    tidyr
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
 Depends: 
