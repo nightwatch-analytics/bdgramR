@@ -6,7 +6,7 @@
 #' @param data A dataframe. Input data from athlete. Default produces a generic body diagram.
 #' @param model A character string. One of the available models. Call model_types(data = data) for full list. Default is 'futuristic_male
 #'
-#'@returns A data frame:
+#' @returns A data frame:
 #'  \describe{
 #'         \item{Id}{Numeric. Unique id of each muscle area.}
 #'         \item{View}{A character String. The type of view (Anterior, Posterior, Left or Right)}
@@ -20,13 +20,10 @@
 #'
 #' @export
 #' @examples
-#' bodygram(data = data)
+#' bodygram()
 #'
-
-bodygram <- function(data = models, model = "futuristic_male"){
-
+bodygram <- function(data = models, model = "futuristic_male") {
   models %>%
     dplyr::filter(Model == model) %>%
     dplyr::select(-Model)
-
 }
