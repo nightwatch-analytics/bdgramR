@@ -23,6 +23,6 @@ Data frame with 49,603 rows 9 columns
 models
 }
 \description{
-A data frame containing all the information from all models
+A data frame containing all the information from all model types
 }
 \keyword{datasets}
