@@ -28,6 +28,6 @@ A data frame:
 Outputs a dataframe of selected body diagram. Use to render the desired body diagram.
 }
 \examples{
-bodygram(data = data)
+bodygram()
 
 }
