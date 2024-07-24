@@ -20,7 +20,7 @@
 #'
 #' @export
 #' @examples
-#' bodygram(data = data)
+#' bodygram()
 #'
 
 bodygram <- function(data = models, model = "futuristic_male"){
