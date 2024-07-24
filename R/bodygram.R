@@ -1,11 +1,12 @@
-#' Bdgramr
+#' Returns a dataframe with the coordinates of a unique body diagram
 #'
-#' This function returns a dataframe with the coordinates of a unique body diagram.
+#' @description
+#' Outputs a dataframe of selected body diagram. Use to render the desired body diagram.
 #'
-#' @param data A dataframe. The dataframe with all the coordinates points. Must be equal to `data`.
-#' @param model A character string. One of the available models. Check model_types(data = data) if not sure. It defaults to 'futuristic_male
+#' @param data A dataframe. Input data from athlete. Default produces a generic body diagram.
+#' @param model A character string. One of the available models. Call model_types(data = data) for full list. Default is 'futuristic_male
 #'
-#'  @return A data frame:
+#'@returns A data frame:
 #'  \describe{
 #'         \item{Id}{Numeric. Unique id of each muscle area.}
 #'         \item{View}{A character String. The type of view (Anterior, Posterior, Left or Right)}
@@ -17,30 +18,15 @@
 #'         \item{y}{A number. y coordinates}
 #'     }
 #'
-#'
 #' @export
 #' @examples
-#' bdgramr(data = data)
+#' bodygram(data = data)
 #'
 
+bodygram <- function(data = models, model = "futuristic_male"){
 
-bdgramr <- function(data = data, model = "futuristic_male"){
-
-  result <- tryCatch({
-
-    data <- data %>% dplyr::filter(Model == model) %>%
-                     dplyr::select(-Model)
-
-    data
-
-  }, error = function(cond){
-
-    message("Check that data is equal data and model is equal to one of the models in `model_types(data = data)`")
-
-    return(NA)
-
-  })
-
-  return(result)
+  models %>%
+    dplyr::filter(Model == model) %>%
+    dplyr::select(-Model)
 
 }
