@@ -2,9 +2,9 @@
 % Please edit documentation in R/model_types.R
 \name{model_types}
 \alias{model_types}
-\title{Body Diagram Model Type}
+\title{Body Diagram Model Types}
 \usage{
-model_types(data = data)
+model_types()
 }
 \arguments{
 \item{data}{A dataframe. The dataframe with all the coordinates points.}
@@ -16,9 +16,9 @@ A data frame:
 }
 }
 \description{
-This function provides a list with the names of all the available diagram's models.
+provides a list with the names of all the available diagram's models.
 }
 \examples{
-model_types(data)
+model_types()
 
 }

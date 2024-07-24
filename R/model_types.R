@@ -1,6 +1,8 @@
-#' Body Diagram Model Type
+#' Body Diagram Model Types
 #'
-#' This function provides a list with the names of all the available diagram's models.
+#' @description
+#'
+#' provides a list with the names of all the available diagram's models.
 #'
 #' @param data A dataframe. The dataframe with all the coordinates points.
 #'
@@ -11,27 +13,10 @@
 #'
 #' @export
 #' @examples
-#' model_types(data)
+#' model_types()
 #'
-
-
-model_types <- function(data = data){
-
-  result <- tryCatch({
-
-  model <- data["Model"]
-  model1 <- unique(model) %>% dplyr::as_tibble()
-
-  print(model1)
-
-  }, error = function(cond){
-
-    message("data must be equal to `data`")
-
-    return(NA)
-
-  })
-
-  return(result)
-
+model_types <- function() {
+  models %>%
+    dplyr::pull(Model) %>%
+    unique()
 }
